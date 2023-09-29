@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="navbar bg-transparent fixed z-50">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -46,7 +46,7 @@ export default function Navbar() {
         </div>
         <a className="btn btn-ghost normal-case text-2xl font-bold">Celebes</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1 text-lg">
           <li>
             <a>Beranda</a>

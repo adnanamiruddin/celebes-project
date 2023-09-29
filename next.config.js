@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "daisyui.com",
       },
+      {
+        protocol: "https",
+        hostname: "bpjcrlrrurqsbebmitqi.supabase.co",
+      },
     ],
   },
 };

@@ -20,7 +20,7 @@ export default function Homepage() {
       <Navbar />
       <Carousel />
 
-      <div className="py-6 mx-56">
+      <div className="py-6 px-4 md:px-0 md:mx-56">
         <h2 className="font-bold text-4xl text-center text-gray-700 mb-6">
           Celebes
         </h2>
@@ -44,18 +44,22 @@ export default function Homepage() {
         </p>
       </div>
 
-      <div className="py-6 mx-24 bg-gray-200">
+      <div className="p-6 bg-gray-200">
         <h2 className="font-bold text-2xl text-gray-700 mb-4">
           Budaya-Budaya dan Kearifan Lokal Pulau Sulawesi
         </h2>
         <div className="divider" />
         <div className="flex flex-wrap justify-center gap-10">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {cultures.map((culture, i) => (
+            <div key={i}>
+              <Card
+                id={culture.id}
+                name={culture.name}
+                desc={culture.desc}
+                image={culture.image}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

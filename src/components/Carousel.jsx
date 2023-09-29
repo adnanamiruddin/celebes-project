@@ -5,137 +5,69 @@ import pindahRumahImg from "../../public/pindah-rumah.jpg";
 import mappaletteBolaImg from "../../public/mappalette-bola.jpeg";
 import gandrangBuloImg from "../../public/gandrang-bulo.webp";
 import cotoMakassarImg from "../../public/coto-makassar.jpg";
+import CarouselItem from "./CarouselItem";
 
 export default function Carousel() {
   return (
-    <div className="carousel w-full max-h-screen">
-      <div id="slide1" className="carousel-item relative w-full">
-        <Image
-          src={rumahTongkonanImg}
-          alt="carousel"
-          objectFit="cover"
-          className="w-full brightness-50 blur-sm"
-        />
-        <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-20 w-3/12">
-            <h3 className="font-bold text-3xl mb-10">Rumah Tongkonan</h3>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-              perspiciatis odio?
-            </p>
-          </div>
-          <Image
-            src={rumahTongkonanImg}
-            alt="carousel"
-            className="w-8/12 h-5/6 object-cover"
-          />
-        </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle btn-ghost text-lg">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle btn-ghost text-lg">
-            ❯
-          </a>
-        </div>
-      </div>
+    <div className="carousel relative w-full md:h-screen">
+      <CarouselItem
+        slide={"slide1"}
+        title={"Rumah Tongkonan"}
+        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
+        perspiciatis odio?`}
+        image={rumahTongkonanImg}
+        prevSlide={"slide4"}
+        nextSlide={"slide2"}
+      />
 
-      <div id="slide2" className="carousel-item relative w-full">
-        <Image
-          src={mappaletteBolaImg}
-          alt="carousel"
-          objectFit="cover"
-          className="w-full brightness-50 blur-sm"
-        />
-        <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-20 w-3/12">
-            <h3 className="font-bold text-3xl mb-10">Mappalette Bola</h3>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-              perspiciatis odio?
-            </p>
-          </div>
-          <Image
-            src={mappaletteBolaImg}
-            alt="carousel"
-            className="w-8/12 h-5/6 object-cover"
-          />
-        </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn btn-circle btn-ghost text-lg">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle btn-ghost text-lg">
-            ❯
-          </a>
-        </div>
-      </div>
+      <CarouselItem
+        slide={"slide2"}
+        title={"Mappalette Bola"}
+        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
+        perspiciatis odio?`}
+        image={mappaletteBolaImg}
+        prevSlide={"slide1"}
+        nextSlide={"slide3"}
+      />
 
-      <div id="slide3" className="carousel-item relative w-full">
-        <Image
-          src={gandrangBuloImg}
-          alt="carousel"
-          objectFit="cover"
-          className="w-full brightness-50 blur-sm"
-        />
-        <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-20 w-3/12">
-            <h3 className="font-bold text-3xl mb-10">Gandrang Bulo</h3>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-              perspiciatis odio?
-            </p>
-          </div>
-          <Image
-            src={gandrangBuloImg}
-            alt="carousel"
-            className="w-8/12 h-5/6 object-cover"
-          />
-        </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn btn-circle btn-ghost text-lg">
-            ❮
-          </a>
-          <a href="#slide4" className="btn btn-circle btn-ghost text-lg">
-            ❯
-          </a>
-        </div>
-      </div>
+      <CarouselItem
+        slide={"slide3"}
+        title={"Gandrang Bulo"}
+        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
+        perspiciatis odio?`}
+        image={gandrangBuloImg}
+        prevSlide={"slide2"}
+        nextSlide={"slide4"}
+      />
 
-      <div id="slide4" className="carousel-item relative w-full">
-        <Image
-          src={cotoMakassarImg}
-          alt="carousel"
-          objectFit="cover"
-          className="w-full brightness-50 blur-sm"
-        />
-        <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-20 w-3/12">
-            <h3 className="font-bold text-3xl mb-10">Coto Makassar</h3>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-              perspiciatis odio?
-            </p>
-          </div>
-          <Image
-            src={cotoMakassarImg}
-            alt="carousel"
-            className="w-8/12 h-5/6 object-cover"
-          />
-        </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn btn-circle btn-ghost text-lg">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle btn-ghost text-lg">
-            ❯
-          </a>
-        </div>
-      </div>
+      <CarouselItem
+        slide={"slide4"}
+        title={"Coto Makassar"}
+        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
+        perspiciatis odio?`}
+        image={cotoMakassarImg}
+        prevSlide={"slide3"}
+        nextSlide={"slide1"}
+      />
+
+      {/* <div className="absolute bottom-1 flex justify-center w-full py-2 gap-2">
+        <a href="#slid1" className="badge badge-primary badge-xs">
+          
+        </a>
+        <a href="#slide2" className="btn btn-xs">
+          2
+        </a>
+        <a href="#slide3" className="btn btn-xs">
+          3
+        </a>
+        <a href="#slide4" className="btn btn-xs">
+          4
+        </a>
+      </div> */}
     </div>
   );
 }
