@@ -17,7 +17,7 @@ export default function Carousel() {
           className="w-full brightness-50 blur-sm"
         />
         <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-32 w-3/12">
+          <div className="absolute top-1/3 left-20 w-3/12">
             <h3 className="font-bold text-3xl mb-10">Rumah Tongkonan</h3>
             <p className="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -49,7 +49,7 @@ export default function Carousel() {
           className="w-full brightness-50 blur-sm"
         />
         <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-32 w-3/12">
+          <div className="absolute top-1/3 left-20 w-3/12">
             <h3 className="font-bold text-3xl mb-10">Mappalette Bola</h3>
             <p className="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -81,7 +81,7 @@ export default function Carousel() {
           className="w-full brightness-50 blur-sm"
         />
         <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-32 w-3/12">
+          <div className="absolute top-1/3 left-20 w-3/12">
             <h3 className="font-bold text-3xl mb-10">Gandrang Bulo</h3>
             <p className="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -113,7 +113,7 @@ export default function Carousel() {
           className="w-full brightness-50 blur-sm"
         />
         <div className="absolute flex justify-end items-end w-full h-full brightness-100">
-          <div className="absolute top-1/3 left-32 w-3/12">
+          <div className="absolute top-1/3 left-20 w-3/12">
             <h3 className="font-bold text-3xl mb-10">Coto Makassar</h3>
             <p className="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.

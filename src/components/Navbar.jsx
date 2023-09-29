@@ -29,7 +29,15 @@ export default function Navbar() {
               <a>Beranda</a>
             </li>
             <li>
-              <a>Sejarah</a>
+              <a>Parent</a>
+              <ul className="p-2">
+                <li>
+                  <a>Submenu 1</a>
+                </li>
+                <li>
+                  <a>Submenu 2</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a>Jelajahi</a>
@@ -43,11 +51,24 @@ export default function Navbar() {
           <li>
             <a>Beranda</a>
           </li>
-          <li>
-            <a>Sejarah</a>
+          <li tabIndex={0}>
+            <details>
+              <summary>Kategori</summary>
+              <ul className="p-2">
+                <li>
+                  <a>Adat Istiadat</a>
+                </li>
+                <li>
+                  <a>Bahasa</a>
+                </li>
+                <li>
+                  <a>Kuliner</a>
+                </li>
+              </ul>
+            </details>
           </li>
           <li>
-            <a>Jelajahi</a>
+            <a>Tentang</a>
           </li>
         </ul>
       </div>

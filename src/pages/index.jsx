@@ -1,9 +1,20 @@
+import { useEffect, useState } from "react";
+import { getAllCultures } from "@/api/public.service";
 import Card from "@/components/Card";
 import Carousel from "@/components/Carousel";
 import Navbar from "@/components/Navbar";
-import React from "react";
 
 export default function Homepage() {
+  const [cultures, setCultures] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getAllCultures();
+      if (data) setCultures(data);
+    };
+    getData();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-300 to-white">
       <Navbar />
@@ -35,7 +46,7 @@ export default function Homepage() {
 
       <div className="py-6 mx-24 bg-gray-200">
         <h2 className="font-bold text-2xl text-gray-700 mb-4">
-          Budaya-Budaya dan Kearifan Lokal Pulau Sulawsi
+          Budaya-Budaya dan Kearifan Lokal Pulau Sulawesi
         </h2>
         <div className="divider" />
         <div className="flex flex-wrap justify-center gap-10">
