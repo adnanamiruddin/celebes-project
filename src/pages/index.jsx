@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Homepage() {
   const [cultures, setCultures] = useState([]);
+  const [isCarouselPassed, setIsCarouselPassed] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -15,9 +16,26 @@ export default function Homepage() {
     getData();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= window.innerHeight) {
+        console.log(window.innerHeight);
+        setIsCarouselPassed(true);
+      } else {
+        setIsCarouselPassed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-300 to-white">
-      <Navbar />
+      <Navbar isCarouselPassed={isCarouselPassed} />
       <Carousel />
 
       <div className="py-6 px-4 md:px-0 md:mx-56">

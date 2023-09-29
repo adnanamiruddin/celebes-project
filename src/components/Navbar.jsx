@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({ isCarouselPassed }) {
   return (
-    <div className="navbar bg-transparent fixed z-50">
+    <div
+      className={`navbar fixed z-50 transition-all ease-in duration-500 ${
+        isCarouselPassed ? "bg-base-100" : "bg-transparent"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost md:hidden">
