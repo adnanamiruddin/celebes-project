@@ -1,7 +1,5 @@
-import Image from "next/image";
 import React from "react";
 import rumahTongkonanImg from "../../public/rumah-tongkonan.jpeg";
-import pindahRumahImg from "../../public/pindah-rumah.jpg";
 import mappaletteBolaImg from "../../public/mappalette-bola.jpeg";
 import gandrangBuloImg from "../../public/gandrang-bulo.webp";
 import cotoMakassarImg from "../../public/coto-makassar.jpg";

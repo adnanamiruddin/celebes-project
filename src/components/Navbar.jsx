@@ -33,13 +33,16 @@ export default function Navbar({ isCarouselPassed }) {
               <a>Beranda</a>
             </li>
             <li>
-              <a>Parent</a>
+              <a>Kategori</a>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <a>Adat Istiadat</a>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <a>Bahasa</a>
+                </li>
+                <li>
+                  <a>Kuliner</a>
                 </li>
               </ul>
             </li>
@@ -59,7 +62,7 @@ export default function Navbar({ isCarouselPassed }) {
           <li tabIndex={0}>
             <details>
               <summary>Kategori</summary>
-              <ul className="p-2">
+              <ul className="p-2 border-2 border-gray-100 w-max">
                 <li>
                   <a>Adat Istiadat</a>
                 </li>
