@@ -1,9 +1,9 @@
-import React from "react";
+import AuthModal from "./AuthModal";
 
 export default function Navbar({ isCarouselPassed }) {
   return (
     <div
-      className={`navbar fixed z-50 transition-all ease-in duration-500 ${
+      className={`navbar fixed z-50 transition-all ease-in duration-300 ${
         isCarouselPassed ? "bg-base-100" : "bg-transparent"
       }`}
     >
@@ -50,6 +50,7 @@ export default function Navbar({ isCarouselPassed }) {
         </div>
         <a className="btn btn-ghost normal-case text-2xl font-bold">Celebes</a>
       </div>
+
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1 text-lg">
           <li>
@@ -77,7 +78,7 @@ export default function Navbar({ isCarouselPassed }) {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-accent">Masuk</a>
+        <AuthModal />
       </div>
     </div>
   );

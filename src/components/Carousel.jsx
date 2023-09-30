@@ -13,9 +13,7 @@ export default function Carousel() {
       <CarouselItem
         slide={"slide1"}
         title={"Rumah Tongkonan"}
-        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-        perspiciatis odio?`}
+        desc={`Rumah Tongkonan adalah rumah tradisional etnik Toraja yang menakjubkan dengan arsitektur khasnya yang kaya akan detail dan makna budaya.`}
         image={rumahTongkonanImg}
         prevSlide={"slide4"}
         nextSlide={"slide2"}
@@ -24,9 +22,7 @@ export default function Carousel() {
       <CarouselItem
         slide={"slide2"}
         title={"Mappalette Bola"}
-        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-        perspiciatis odio?`}
+        desc={`Adat Mappalette Bola adalah upacara adat yang merayakan persatuan dan kedamaian di antara suku-suku di Sulawesi Selatan dengan tarian, nyanyian, dan perayaan.`}
         image={mappaletteBolaImg}
         prevSlide={"slide1"}
         nextSlide={"slide3"}
@@ -35,9 +31,7 @@ export default function Carousel() {
       <CarouselItem
         slide={"slide3"}
         title={"Gandrang Bulo"}
-        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-        perspiciatis odio?`}
+        desc={`Gandrang Bulo adalah jenis musik tradisional dari Sulawesi Selatan yang kaya akan ritme dan harmoni, sering dimainkan dalam berbagai upacara budaya.`}
         image={gandrangBuloImg}
         prevSlide={"slide2"}
         nextSlide={"slide4"}
@@ -46,9 +40,7 @@ export default function Carousel() {
       <CarouselItem
         slide={"slide4"}
         title={"Coto Makassar"}
-        desc={`Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Corporis, eaque fugit. Quam quo ipsam quas molestias quae, dicta
-        perspiciatis odio?`}
+        desc={`Coto Makassar adalah hidangan lezat berupa soto dengan bahan dasar daging sapi yang khas dari Makassar, disajikan dengan kuah kacang kental yang nikmat.`}
         image={cotoMakassarImg}
         prevSlide={"slide3"}
         nextSlide={"slide1"}

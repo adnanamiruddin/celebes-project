@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 export default function CarouselItem({
   slide,
@@ -13,15 +12,15 @@ export default function CarouselItem({
     <div id={slide} className="carousel-item relative w-full">
       <Image
         src={image}
-        alt="carousel"
+        alt={title}
         className="w-full object-cover brightness-75 md:brightness-50 md:blur-sm"
       />
 
       {/* Tab - Desktop View START */}
       <div className="hidden md:flex absolute justify-end items-end w-full h-full brightness-100">
-        <div className="absolute top-1/3 left-20 w-3/12">
+        <div className="absolute top-1/3 w-3/12 md:left-14 xl:left-20">
           <h3 className="font-bold text-3xl mb-10">{title}</h3>
-          <p className="text-justify">{desc}</p>
+          <p className="text-justify sm:text-sm">{desc}</p>
         </div>
         <Image
           src={image}

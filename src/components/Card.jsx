@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Card({ id, name, desc, image }) {
   return (
-    <div className="card w-full basis-3 bg-base-100 shadow-xl">
+    <div className="card w-full bg-base-100 shadow-xl">
       <figure className="relative h-60">
         <Image
           src={image}
