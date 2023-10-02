@@ -3,14 +3,15 @@ import {
   AiOutlineYoutube,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import pulauSulawesiIcon from "../../public/pulau-sulawesi-icon.svg";
+// import pulauSulawesiIcon from "../../public/pulau-sulawesi-icon.svg";
+import mcLogo from "../../public/mc-logo.png";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
-        <Image src={pulauSulawesiIcon} alt="Icon" className="w-12" />
+        <Image src={mcLogo} alt="Icon" className="w-12" />
         <p>Copyright © 2023 - All right reserved</p>
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">

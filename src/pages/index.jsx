@@ -1,13 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getAllCultures } from "@/api/public.service";
 import Card from "@/components/Card";
 import Carousel from "@/components/Carousel";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Homepage() {
   const [cultures, setCultures] = useState([]);
   const [isCarouselPassed, setIsCarouselPassed] = useState(false);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
 
   useEffect(() => {
     const getData = async () => {
@@ -25,13 +30,17 @@ export default function Homepage() {
         setIsCarouselPassed(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-300 to-white">
@@ -42,7 +51,18 @@ export default function Homepage() {
         <h2 className="font-bold text-4xl text-center text-gray-700 mb-6">
           Celebes
         </h2>
-        <p className="text-black text-justify mb-4">
+
+        <motion.p
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, x: 100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="text-black text-justify mb-4"
+        >
           Di tengah arus modernisasi dan globalisasi yang semakin meluas,
           masyarakat Sulawesi, yang dikenal dengan keberagaman budaya dan
           tradisi etniknya, mulai kehilangan jejaknya terhadap akar budaya yang
@@ -55,8 +75,19 @@ export default function Homepage() {
           pesat, yang membawa perubahan dalam nilai-nilai sosial dan preferensi,
           dan urbanisasi yang memicu pergeseran fokus ke arah norma-norma
           perkotaan.
-        </p>
-        <p className="text-black text-justify mb-4">
+        </motion.p>
+
+        <motion.p
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="text-black text-justify mb-4"
+        >
           Selain itu, budaya Sulawesi juga kaya akan tradisi musik, tarian, dan
           seni rupa yang unik. Setiap etnis di Sulawesi memiliki bentuk seni
           yang khas, dan ini tercermin dalam berbagai festival budaya yang
@@ -65,7 +96,7 @@ export default function Homepage() {
           sebagai sumber informasi dan inspirasi tentang budaya Sulawesi
           Selatan. Kami berharap web ini dapat menjadi wadah bagi semua orang
           yang ingin menjelajahi keindahan dan keragaman budaya Sulawesi.
-        </p>
+        </motion.p>
       </div>
 
       <div className="p-6 pb-14 bg-gray-200 md:px-16">
